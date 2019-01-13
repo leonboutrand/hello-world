@@ -5,10 +5,38 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>WESH</h1>
-<h2>Tristan petit pd</h2>
-<img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-0/p206x206/418728_199729963490697_212370197_n.jpg?_nc_cat=109&_nc_ht=scontent-cdg2-1.xx&oh=5af9be18de1b3498c5d8eacd670ced13&oe=5CCE5468" alt="LOL">
-<legend>Joga bonito do Brasil at the playa</legend>
+  <header>
+    <div class="page_title">
+<h1>PORCNOSTICS</h1>
+</div>
+</header>
+
+
+<form action="action_page.php">
+  <div class="imgcontainer">
+    <p>Tristan petit PD</p>
+    <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-0/p206x206/418728_199729963490697_212370197_n.jpg?_nc_cat=109&_nc_ht=scontent-cdg2-1.xx&oh=5af9be18de1b3498c5d8eacd670ced13&oe=5CCE5468" alt="Avatar" class="avatar">
+  </div>
+  <legend style="text-align: center ;">Joga bonito do Brasil at the playa</legend>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
 
 </body>
 </html>
