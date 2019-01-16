@@ -3,7 +3,7 @@ require "nokogiri"
 
 def scrape_craiglist_antiques(journee)
   # TODO: return an array of Antiques found of Craiglist for this `city`.
-  j = journee < 6 ? "0" + (journee + 4).to_s : (journee + 6).to_s
+  j = journee < 6 ? "0" + (journee + 4).to_s : (journee + 4).to_s # journées 21 et 22 inversées
   html_content = open("https://www.lequipe.fr/Football/FootballResultat634#{j}.html").read
   doc = Nokogiri::HTML(html_content)
   results = []
@@ -23,7 +23,7 @@ def scrape_craiglist_antiques(journee)
   end
 
   results.each_with_index do |x, i|
-    p "#{dom[i][0...dom[i].index(" ")]} #{x} #{ext[i][0..ext[i].index("(")-2]}" # [0...ext[i].index(" ")]
+    p "#{dom[i].match(/[\w\-î]+/)[0]} #{x} #{ext[i].match(/[\w\-î]+/)[0]}" # [0...ext[i].index(" ")]
   end
   # results #Base .resultat .equipeDom a
 end
