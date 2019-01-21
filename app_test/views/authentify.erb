@@ -1,0 +1,8 @@
+<h1>Authentify</h1>
+
+<form action="/connect" method="post">
+  <input type="text" name="username"><br><br>
+  <input type="password" name="password"><br><br>
+  <input type="submit" value="Connect">
+  <%= !@password ? "Enter id" : "#{@password} is a wrong password" %>
+</form>
